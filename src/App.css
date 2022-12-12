@@ -1,38 +1,205 @@
-.App {
-  text-align: center;
+*{
+  margin: 0px;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*:focus {
+  outline: none;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@keyframes title{
+  0%{
+    opacity: 0;
+    color: white;
+    filter: blur(50px);
+  }
+  100%{
+    opacity: 1;
+    color: #fca71c;
+    filter: blur(0px);
   }
 }
+@keyframes gameBox{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+.App{
+  text-align: center;
+  background-color: #00131d;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.appBody{
+  min-width: 400px;
+  height: 100%;
+}
+.GameTitle{
+  padding-top: 50%;
+  min-width: 400px;
+  color: #e63946;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  font-family: Arial, Helvetica, sans-serif;
+}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#t1{
+ opacity: 0;
+ animation: title ease-in 3s forwards;
+}
+#t2{
+  opacity: 0;
+  animation: title ease-in 3s forwards;
+  animation-delay: 50ms;
+}
+#t3{
+  opacity: 0;
+  animation: title ease-in 3s forwards;
+  animation-delay: 100ms;
+}
+#t4{
+  opacity: 0;
+  animation: title ease-in 3s forwards;
+  animation-delay: 150ms;
+}
+
+#t5{
+  opacity: 0;
+  animation: title ease-in 3s forwards;
+  animation-delay: 200ms;
+}
+#t6{
+  opacity: 0;
+  animation: title ease-in 3s forwards;
+  animation-delay: 250ms;
+}
+#t7{
+  opacity: 0;
+  animation: title ease-in 3s forwards;
+  animation-delay: 300ms;
+}
+
+.room_box{
+  opacity: 0;
+  margin-top: 10%;
+  min-width: 400px;
+  min-height: 40vh;
+  background-color: #219ebc;
+  border-radius: 30px;
+  position: sticky;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+  animation: gameBox ease-in 2s forwards;
+  animation-delay: 3s;
+}
+
+.roob_box input{
+  text-decoration: none;
+  border: none;
+}
+#name{
+  border-radius: 999px;
+  width: 75%;
+  height: 60px;
+  border: none;
+  background-color: #00324d;
+}
+#name2{
+  border-radius: 999px;
+  width: 75%;
+  height: 60px;
+  border: none;
+  background-color: #0074b3;
+}
+#id{
+  border-radius: 999px;
+  width: 75%;
+  height: 60px;
+  border: none;
+  background-color: #00324d;
+}
+#id2{
+  border-radius: 999px;
+  width: 75%;
+  height: 60px;
+  border: none;
+  background-color: #0074b3;
+}
+
+.room_name{
+  display:flex;
+  align-items: center;
+  flex-direction:column;
+  padding-top: 10%;
+  margin-top: 5%;
+}
+.room_name label{
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: large;
+  font-weight: 600; 
+}
+.room_Id{
+  display:flex;
+  align-items: center;
+  flex-direction:column;
+  padding-top: 5%;
+}
+.room_Id label{
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: large;
+  font-weight: 600;
+}
+.buttons{
   display: flex;
   flex-direction: column;
+  width: 100%;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  position: sticky;
+}
+#button_two{
+  width: 50%;
+  height: 50px;
+  border-radius: 999px;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+#button_two{
+  margin-top: 10%;
+  background-color: #c7313d;
+  color: black;
+  font-size: larger;
+  font-weight: bold;
+  transition: 0.1s ease-in-out;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+#button_two:hover{
+  background-color:  #e63946;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+input{
+  color: white;
+  padding-left: 5%;
+  font-size: large;
+  font-weight: 600;
+  transition: .3s ease-in-out;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#name:hover{
+  background-color:#0074b3 ;
+  
+}
+#id:hover{
+  background-color: #0074b3;
+}
+#label1{
+  float: left;
 }
