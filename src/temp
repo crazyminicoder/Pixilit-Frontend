@@ -1,0 +1,25 @@
+ useEffect(()=>{
+         setInterval(()=>{
+            const data={
+                length:word.length,
+                room:Room_ID
+            }
+            socket.emit("getRandomNumber",data);
+        },10000)
+        socket.on("receiveRandomNumber",(data)=>{
+
+        })
+    });
+
+
+    if(word.charAt(number) !== " "){
+        let letter= word.charAt(number)
+        document.getElementById(number).innerHTML = letter;
+        console.log("number: ",number);
+        console.log("letter: ",letter);
+    }
+
+    placeholder="Guess..." className='guessInput'
+
+    const[guessed , setGuessed]=useState(false);
+    const[guessCount, setGuessCount]=useState(0);

@@ -8,7 +8,13 @@
     "@testing-library/user-event": "^13.5.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-loader-spinner": "^5.3.4",
     "react-scripts": "5.0.1",
+    "react-scroll-to-bottom": "^4.2.0",
+    "react-sound": "^1.2.0",
+    "socket.io-client": "^4.5.3",
+    "soundmanager2": "^2.97.20170602",
+    "use-sound": "^4.0.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
