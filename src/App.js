@@ -2,6 +2,7 @@ import './App.css';
 import io from 'socket.io-client'
 import {useEffect, useState} from 'react'
 import Loby from './Loby';
+import {Helmet} from "react-helmet";
 import 'react-sound';
 const socket = io.connect("https://pixilit.onrender.com");
 
@@ -48,7 +49,9 @@ const joinRoom = () =>{
 
   return (
     <div className="App">
-      
+      <Helmet >
+        <title>Pixilit</title>
+      </Helmet>
       {!loby ? (
         <div className='appBody'>
         <div className='GameTitle'>
