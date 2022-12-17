@@ -3,7 +3,7 @@ import io from 'socket.io-client'
 import {useEffect, useState} from 'react'
 import Loby from './Loby';
 import 'react-sound';
-const socket = io.connect("http://localhost:3001");
+const socket = io.connect("https://pixilit.onrender.com");
 
 
 function App() {
